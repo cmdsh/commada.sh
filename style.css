@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Restart Hard";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/RestartHardDemo-Regular.otf");
+}
+@font-face {
+  font-family: "Restart Soft";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/RestartSoftDemo-Regular.otf");
+}
+@font-face {
+  font-family: "Raptor Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/RaptorMonoDemo-Regular.otf");
+}
+@font-face {
+  font-family: "Micro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/MicroDemo-Regular.otf");
+}
+@font-face {
+  font-family: "BL Cereal";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/BLCereal-Regular.otf");
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Restart Hard";
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: content-fit;
+  user-select: none;
+}
+
+.repetition {
+  font-size: min(5vw, 6em);
+}
+
+h1 {
+  font-size: min(10vw, 10em);
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.invert {
+  color: white;
+  background-color: black;
+}
+
+.right {
+  max-width: 60%;
+  font-size: larger;
+  margin-left: 1em;
+}
+
+.right-nav {
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+.artists {
+  color: #888;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 4em;
+  user-select: none;
+}
+
+.artists a {
+  color: black;
+}
+
+.artists .selected {
+  color: white;
+  background: black;
+}
+
+.contact {
+  font-size: min(4em, 8vw);
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.contact div {
+  flex: 1;
+}
+
+body:has(.beliefs) {
+  background: black;
+  color: white;
+}
+
+.beliefs {
+  background: black;
+  color: white;
+  display: grid;
+  width: 800px;
+  margin: 1em auto;
+  font-size: 2em;
+}
+
+.beliefs .invert {
+  color: black;
+  background-color: white;
+}
+
+.beliefs div {
+  padding: 1em;
+}
+
+@media (max-width: 800px) {
+  .left {
+    display: none;
+  }
+
+  .artists {
+    font-size: 5vw;
+  }
+
+  .right, .contact {
+    max-width: 100%;
+    margin: 0.5em;
+  }
+
+  .right-nav {
+    display: inherit;
+    font-size: 5vw;
+    text-align: justify;
+    text-align-last: justify;
+  }
+
+  .beliefs {
+    margin: 0;
+    font-size: 4.9vw;
+  }
+}
+
